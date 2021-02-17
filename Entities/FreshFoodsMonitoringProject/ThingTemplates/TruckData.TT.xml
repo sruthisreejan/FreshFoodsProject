@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="password">
+    <ThingTemplates>
+        <ThingTemplate
+         baseThingTemplate="GenericThing"
+         description="Thing Template for Freshfoods monitoring system"
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         homeMashup=""
+         inheritedValueStream=""
+         name="TruckData.TT"
+         projectName="FreshFoodsMonitoringProject"
+         tags=""
+         thingPackage=""
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_AdminGrp"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_ServiceEngineerGrp"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_AdminGrp"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_ServiceEngineerGrp"
+                         type="Group"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_AdminGrp"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_ServiceEngineerGrp"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_AdminGrp"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_ServiceEngineerGrp"
+                         type="Group"></Principal>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_AdminGrp"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_ServiceEngineerGrp"
+                         type="Group"></Principal>
+                    </EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="Fresh_Food_Org"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="Checkpoint1"></AlertDefinitions>
+                <AlertDefinitions
+                 name="Checkpoint2"></AlertDefinitions>
+                <AlertDefinitions
+                 name="Checkpoint3"></AlertDefinitions>
+                <AlertDefinitions
+                 name="Checkpoint4"></AlertDefinitions>
+                <AlertDefinitions
+                 name="Destination"></AlertDefinitions>
+                <AlertDefinitions
+                 name="DistanceCovered"></AlertDefinitions>
+                <AlertDefinitions
+                 name="GasLeakage"></AlertDefinitions>
+                <AlertDefinitions
+                 name="GasSensor"></AlertDefinitions>
+                <AlertDefinitions
+                 name="Humidity"></AlertDefinitions>
+                <AlertDefinitions
+                 name="HumidityWarning"></AlertDefinitions>
+                <AlertDefinitions
+                 name="Temperature"></AlertDefinitions>
+                <AlertDefinitions
+                 name="TemperatureWarning"></AlertDefinitions>
+                <AlertDefinitions
+                 name="truckIcon"></AlertDefinitions>
+                <AlertDefinitions
+                 name="TruckId"></AlertDefinitions>
+                <AlertDefinitions
+                 name="TruckName"></AlertDefinitions>
+                <AlertDefinitions
+                 name="TruckStatus"></AlertDefinitions>
+                <AlertDefinitions
+                 name="Warehouse"></AlertDefinitions>
+            </AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="Checkpoint1"
+                     ordinal="10"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="Checkpoint2"
+                     ordinal="11"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="Checkpoint3"
+                     ordinal="12"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="Checkpoint4"
+                     ordinal="13"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="Destination"
+                     ordinal="8"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isLogged="true"
+                     aspect.isPersistent="true"
+                     baseType="NUMBER"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="DistanceCovered"
+                     ordinal="14"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="GasLeakage"
+                     ordinal="4"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="HumidityWarning"
+                     ordinal="3"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="TemperatureWarning"
+                     ordinal="2"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="cc_RedTruckMapIcon"
+                     aspect.isPersistent="true"
+                     baseType="IMAGELINK"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="truckIcon"
+                     ordinal="15"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="TruckId"
+                     ordinal="5"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="TruckName"
+                     ordinal="6"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="TruckStatus"
+                     ordinal="7"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="Warehouse"
+                     ordinal="9"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions></ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations></ServiceImplementations>
+                <Subscriptions>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="DataChange"
+                     name="GasLeakageSubsciption"
+                     source=""
+                     sourceProperty="GasSensor"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="GasLeakageSubsciption">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 dataShapeName=""
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            try {
+                                                let flag=false;
+                                                if(me.GasSensor>250) {
+                                                    me.GasLeakage="Gas Leakage"; 
+                                                    flag=true;
+                                                    
+                                            }
+                                                else{
+                                                    me.GasLeakage=" ";
+                                                }
+                                            
+                                            	if(flag){
+                                                    
+                                                    // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(FreshFoodsAlertList.DS)
+                                            let streamEntryValues = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "FreshFoodsAlertList.DS"
+                                            });
+                                            
+                                            // FreshFoodsAlertList.DS entry object
+                                            let streamEntry = {
+                                                alertMessage: me.GasLeakage,// STRING
+                                                alertTime: eventTime,// DATETIME
+                                                isAcknowledged: false,// BOOLEAN
+                                                ackMessage: ""// STRING
+                                            };
+                                                  
+                                            streamEntryValues.AddRow(streamEntry);
+                                            
+                                                    
+                                                Things["FreshFoodsAlertList.Stream"].AddStreamEntry({
+                                            	sourceType: undefined /* STRING */,
+                                            	values: streamEntryValues /* INFOTABLE */,
+                                            	location: undefined /* LOCATION */,
+                                            	source: me.TruckId /* STRING */,
+                                            	timestamp: undefined /* DATETIME */,
+                                            	tags: undefined /* TAGS */
+                                            });   
+                                            }   
+                                            } catch(err) {
+                                                logger.error("Error occurred in " + me.name + " in [GasLeakageSubscription] : on line " + err.lineNumber + ": " + err.message);
+                                            }
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="DataChange"
+                     name="HumiditySubsciption"
+                     source=""
+                     sourceProperty="Humidity"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="HumiditySubsciption">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 dataShapeName=""
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            try {
+                                                let flag=false;
+                                                if(me.Humidity>60) {
+                                                    me.HumidityWarning="High Humidity";
+                                                    flag=true;
+                                                    
+                                            } 
+                                                else{
+                                                    me.HumidityWarning=" ";
+                                                }
+                                            
+                                            	if(flag){
+                                                    
+                                                    // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(FreshFoodsAlertList.DS)
+                                            let streamEntryValues = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "FreshFoodsAlertList.DS"
+                                            });
+                                            
+                                            // FreshFoodsAlertList.DS entry object
+                                            let streamEntry = {
+                                                alertMessage: me.HumidityWarning,// STRING
+                                                alertTime: eventTime,// DATETIME
+                                                isAcknowledged: false,// BOOLEAN
+                                                ackMessage: ""// STRING
+                                            };
+                                                  
+                                            streamEntryValues.AddRow(streamEntry);
+                                            
+                                                    
+                                                Things["FreshFoodsAlertList.Stream"].AddStreamEntry({
+                                            	sourceType: undefined /* STRING */,
+                                            	values: streamEntryValues /* INFOTABLE */,
+                                            	location: undefined /* LOCATION */,
+                                            	source: me.TruckId /* STRING */,
+                                            	timestamp: undefined /* DATETIME */,
+                                            	tags: undefined /* TAGS */
+                                            });   
+                                            }   
+                                            } catch(err) {
+                                                logger.error("Error occurred in " + me.name + " in [HumiditySubscription] : on line " + err.lineNumber + ": " + err.message);
+                                            }
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="DataChange"
+                     name="TemperatureSubscription"
+                     source=""
+                     sourceProperty="Temperature"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="TemperatureSubscription">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 dataShapeName=""
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            try {
+                                                let flag=false;
+                                                if(me.Temperature>20) {
+                                                    me.TemperatureWarning="High Temperature";
+                                                    flag=true;
+                                                    
+                                            } 
+                                            	else if(me.Temperature<0) {
+                                                 	me.TemperatureWarning="Low Temperature";
+                                                    flag=true;
+                                            }
+                                                else{
+                                                    me.TemperatureWarning=" ";
+                                                }
+                                            
+                                            	if(flag){
+                                                    
+                                                    // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(FreshFoodsAlertList.DS)
+                                            let streamEntryValues = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "FreshFoodsAlertList.DS"
+                                            });
+                                            
+                                            // FreshFoodsAlertList.DS entry object
+                                            let streamEntry = {
+                                                alertMessage: me.TemperatureWarning,// STRING
+                                                alertTime: eventTime,// DATETIME
+                                                isAcknowledged: false,// BOOLEAN
+                                                ackMessage: ""// STRING
+                                            };
+                                                  
+                                            streamEntryValues.AddRow(streamEntry);
+                                            
+                                                    
+                                                Things["FreshFoodsAlertList.Stream"].AddStreamEntry({
+                                            	sourceType: undefined /* STRING */,
+                                            	values: streamEntryValues /* INFOTABLE */,
+                                            	location: undefined /* LOCATION */,
+                                            	source: me.TruckId /* STRING */,
+                                            	timestamp: undefined /* DATETIME */,
+                                            	tags: undefined /* TAGS */
+                                            });   
+                                            }   
+                                            } catch(err) {
+                                                logger.error("Error occurred in " + me.name + " in [TemperatureSubscription] : on line " + err.lineNumber + ": " + err.message);
+                                            }
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
+            </ThingShape>
+            <ImplementedShapes>
+                <ImplementedShape
+                 name="TruckData.TS"
+                 type="ThingShape"></ImplementedShape>
+            </ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_AdminGrp"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_ServiceEngineerGrp"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_AdminGrp"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_ServiceEngineerGrp"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+            </InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

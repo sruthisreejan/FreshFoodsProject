@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="password">
+    <Projects>
+        <Project
+         artifactId=""
+         aspect.projectType="Component"
+         dependsOn="{&quot;extensions&quot;:&quot;StatePanelWidget-extension:8.5.2,FFCardWidget:1.0.0,ProgressGauge_ExtensionPackage:2.0.0,GoogleWidgets_ExtensionPackage:3.0.3&quot;,&quot;projects&quot;:&quot;Cold_Chain_TrialProject:1.0.0&quot;}"
+         description=""
+         documentationContent=""
+         groupId=""
+         homeMashup=""
+         minPlatformVersion=""
+         name="FreshFoodsMonitoringProject"
+         packageVersion="1.0.0"
+         projectName="FreshFoodsMonitoringProject"
+         publishResult=""
+         state="DRAFT"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Project>
+    </Projects>
+</Entities>

@@ -1,0 +1,1279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="FreshFoodsHelperThing"
+         projectName="FreshFoodsMonitoringProject"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_AdminGrp"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_ServiceEngineerGrp"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_AdminGrp"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="Fresh_Food_ServiceEngineerGrp"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="Fresh_Food_Org:Admin"
+                     type="OrganizationalUnit"></Principal>
+                    <Principal
+                     isPermitted="true"
+                     name="Fresh_Food_Org:Service_Engineer"
+                     type="OrganizationalUnit"></Principal>
+                    <Principal
+                     isPermitted="true"
+                     name="Fresh_Food_Org:Service_Engineer2Grp"
+                     type="OrganizationalUnit"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetAcknowledgedCount">
+                        <ResultType
+                         baseType="NUMBER"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetAcknowledgedList">
+                        <ResultType
+                         aspect.dataShape="FreshFoodsAlertList.DS"
+                         aspect.isStreamEntry="true"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetAlertCount">
+                        <ResultType
+                         baseType="NUMBER"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetAlertList">
+                        <ResultType
+                         aspect.dataShape="FreshFoodsAlertList.DS"
+                         aspect.isStreamEntry="true"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetDeviceAlert">
+                        <ResultType
+                         aspect.dataShape="FreshFoodsAlertList.DS"
+                         aspect.isStreamEntry="true"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="deviceID"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetDeviceModelName">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="deviceType"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetETA">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="LOCATION"
+                             description=""
+                             name="destination"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="LOCATION"
+                             description=""
+                             name="location"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetFoodStatus">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description=""
+                             name="gas"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description=""
+                             name="humidity"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description=""
+                             name="temp"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetGoogleMapRoute">
+                        <ResultType
+                         aspect.dataShape="FF_RouteMap.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="LOCATION"
+                             description=""
+                             name="checkpoint1"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="LOCATION"
+                             description=""
+                             name="checkpoint2"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="LOCATION"
+                             description=""
+                             name="checkpoint3"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="LOCATION"
+                             description=""
+                             name="checkpoint4"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="LOCATION"
+                             description=""
+                             name="destination"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="LOCATION"
+                             description=""
+                             name="warehouse"
+                             ordinal="7"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetTotalAlertCount">
+                        <ResultType
+                         baseType="NUMBER"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getUserLogin">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="LocationService">
+                        <ResultType
+                         aspect.dataShape="LocationDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="SetAckMessage">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="ackComment"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="streamId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="SetNotificationStatus">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="TempHumidGasService">
+                        <ResultType
+                         aspect.dataShape="TempHumidGasDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="TruckStatusService">
+                        <ResultType
+                         aspect.dataShape="Status"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetAcknowledgedCount">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // result: NUMBER
+                                        let result = Things["AcknowledgedAlertList.Stream"].GetStreamEntryCount();
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetAcknowledgedList">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // result: INFOTABLE dataShape: ""
+                                        let result = Things["AcknowledgedAlertList.Stream"].GetStreamEntriesWithData({
+                                        	oldestFirst: false /* BOOLEAN */,
+                                        	maxItems: undefined /* NUMBER */
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetAlertCount">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // result: NUMBER
+                                        let result = Things["FreshFoodsAlertList.Stream"].GetStreamEntryCount();
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetAlertList">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // result: INFOTABLE dataShape: ""
+                                        let result = Things["FreshFoodsAlertList.Stream"].GetStreamEntriesWithData({
+                                        	oldestFirst: false /* BOOLEAN */,
+                                        	maxItems: undefined /* NUMBER */
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetDeviceAlert">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        	// result: INFOTABLE dataShape: ""
+                                        	let alerts = Things["FreshFoodsAlertList.Stream"].GetStreamEntriesWithData({
+                                        		oldestFirst: undefined /* BOOLEAN */ ,
+                                        		maxItems: undefined /* NUMBER */
+                                        	});
+                                        	var query = {
+                                        
+                                        		"filters": {
+                                        			"type": "EQ",
+                                        			"fieldName": "source",
+                                        			"value": deviceID
+                                        		}
+                                        	};
+                                        	let params = {
+                                        		t: alerts /* INFOTABLE */ ,
+                                        		query: query /* QUERY */
+                                        	};
+                                        
+                                        	// result: INFOTABLE
+                                        	var result = Resources["InfoTableFunctions"].Query(params);
+                                        
+                                        
+                                        } catch (err) {
+                                        	logger.error("Error Occurred : " + err.lineNumber + " ; " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetDeviceModelName">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let config=me.GetConfigurationTable({
+                                        	tableName: "InstrumentAPIConfigure" /* STRING */
+                                        });
+                                        let apiurl=config.item;
+                                        apiurl=apiurl.replace("{deviceType}",deviceType);
+                                        let params = {
+                                        	url: apiurl /* STRING */,
+                                        	timeout: 5000 /* NUMBER */,
+                                        };
+                                        
+                                        // result: JSON
+                                        let result = Resources["ContentLoaderFunctions"].GetJSON(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetETA">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try{
+                                        // distanceBetween(loc1:LOCATION, loc2:LOCATION, units:STRING):NUMBER
+                                        let difference = distanceBetween(location, destination, "");
+                                        let inKm=difference*1.60934;
+                                        let avg=inKm/12;
+                                        result=Math.round(avg)+" hrs";
+                                            
+                                        
+                                        }catch(err){
+                                        	logger.error("GetETA : " + err.lineNumber + " ; " + err);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetFoodStatus">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        if ((temp > 15) || (gas > 250) || (humidity > 50)) {
+                                        	result = "Poor";
+                                        } else {
+                                        	result = "Good";
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetGoogleMapRoute">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(FF_RouteMap.DS)
+                                        let table = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "FF_RouteMap.DS"
+                                        });
+                                        // FF_RouteMap.DS entry object
+                                        
+                                        
+                                        let entry1 = {
+                                        	location: warehouse // LOCATION
+                                        };
+                                        
+                                        table.AddRow(entry1);
+                                        let entry2 = {
+                                        	location: checkpoint1 // LOCATION
+                                        };
+                                        
+                                        table.AddRow(entry2);
+                                        let entry3 = {
+                                        	location: checkpoint2 // LOCATION
+                                        };
+                                        
+                                        table.AddRow(entry3);
+                                        let entry4 = {
+                                        	location: checkpoint3 // LOCATION
+                                        };
+                                        
+                                        table.AddRow(entry4);
+                                        let entry5 = {
+                                        	location: checkpoint4 // LOCATION
+                                        };
+                                        
+                                        table.AddRow(entry5);
+                                        let entry6 = {
+                                        	location: destination // LOCATION
+                                        };
+                                        
+                                        table.AddRow(entry6);
+                                        
+                                        result = table;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetTotalAlertCount">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // result: NUMBER
+                                        let ackCount = me.GetAcknowledgedCount();
+                                        // result: NUMBER
+                                        let alertCount = me.GetAlertCount();
+                                        result = ackCount+alertCount;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getUserLogin">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        
+                                            	let user = Resources["CurrentSessionInfo"].GetCurrentUser();
+                                                let groups = Users[user].GetGroups();
+                                                var query = {
+                                                    "filters": {
+                                                    "type": "EQ",
+                                                    "fieldName": "name",
+                                                    "value": "Fresh_Food_AdminGrp"
+                                                    }
+                                                };
+                                            
+                                          var length = Resources["InfoTableFunctions"].Query({  
+                                                t: groups,
+                                                query: query
+                                            }).rows.length;
+                                                var result = false;
+                                            if(length === 0)
+                                            {
+                                                result= true;
+                                            }
+                                            } catch (err) {
+                                            	logger.error("[UserLogin] : " + err.lineNumber + " ; " + err);
+                                            }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="LocationService">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        
+                                        
+                                        	var transit = ThingTemplates["TruckData.TT"].QueryImplementingThingsWithData({
+                                        
+                                        		query: {
+                                        			"filters": {
+                                        						"type": "NotNear",
+                                                "fieldName": "Location",
+                                                "distance": "1",
+                                                "units": "K(ilometers)",
+                                                "location": {
+                                                    "latitude": "28.7041",
+                                                    "longitude": "77.1025",
+                                                    "elevation": "0",
+                                                    "units": "WGS84"
+                                                }
+                                        					}
+                                                }
+                                        	}).rows.length;
+                                        
+                                            var customerWH = ThingTemplates["TruckData.TT"].QueryImplementingThingsWithData({
+                                        
+                                        		query: {
+                                        			
+                                                                  "filters": {
+                                        						"type": "Near",
+                                                "fieldName": "Location",
+                                                "distance": "1",
+                                                "units": "K(ilometers)",
+                                                "location": {
+                                                    "latitude": "28.7041",
+                                                    "longitude": "77.1025",
+                                                    "elevation": "0",
+                                                    "units": "WGS84"
+                                                }
+                                        					}
+                                        				
+                                        			
+                                        		}
+                                        	}).rows.length;
+                                        	
+                                            
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(Status)
+                                        	 var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "LocationDS"
+                                        	});
+                                        	var obj = new Object();
+                                        	obj.warehouse = customerWH;
+                                        	obj.transit = transit;
+                                        	result.AddRow(obj); 
+                                        
+                                        } catch (err) {
+                                        	logger.error("[Active] : " + err.lineNumber + " ; " + err);
+                                        
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="SetAckMessage">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // result: INFOTABLE dataShape: ""
+                                        let reqEntry = Things["FreshFoodsAlertList.Stream"].GetStreamEntry({
+                                        	streamEntryId: streamId /* STRING */
+                                        });
+                                        
+                                        Things["FreshFoodsAlertList.Stream"].DeleteStreamEntry({
+                                        	streamEntryId: streamId /* STRING */
+                                        });
+                                        
+                                        message=reqEntry.alertMessage;
+                                        time=reqEntry.alertTime;
+                                        truckId=reqEntry.source;
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(FreshFoodsAlertList.DS)
+                                        let table = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "FreshFoodsAlertList.DS"
+                                        });
+                                        
+                                        
+                                        // FreshFoodsAlertList.DS entry object
+                                        let newEntry = {
+                                            alertMessage: message,// STRING
+                                            alertTime: time,// DATETIME
+                                            isAcknowledged: true,// BOOLEAN
+                                            ackMessage: ackComment// STRING
+                                        };
+                                        table.AddRow(newEntry);
+                                        
+                                        Things["AcknowledgedAlertList.Stream"].AddStreamEntry({
+                                        	sourceType: undefined /* STRING */,
+                                        	values: table /* INFOTABLE */,
+                                        	location: undefined /* LOCATION */,
+                                        	source: truckId /* STRING */,
+                                        	timestamp: undefined /* DATETIME */,
+                                        	tags: undefined /* TAGS */
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="SetNotificationStatus">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // result: NUMBER
+                                        let count = Things["FreshFoodsAlertList.Stream"].GetStreamEntryCount();
+                                        
+                                        if(count==0){
+                                        result=false;
+                                        }
+                                        else{
+                                        result=true;
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="TempHumidGasService">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        
+                                        
+                                        	var temp = ThingTemplates["TruckData.TT"].QueryImplementingThingsWithData({
+                                        
+                                        		query: {
+                                        			"filters": {
+                                        				"type": "OR",
+                                        				"filters": [{
+                                        						"type": "LE",
+                                        						"fieldName": "Temperature",
+                                        						"value": "0"
+                                        					},
+                                        					{
+                                        						"type": "GE",
+                                        						"fieldName": "Temperature",
+                                        						"value": "20"
+                                        					}
+                                        				]
+                                        			}
+                                        		}
+                                        	}).rows.length;
+                                        
+                                        	var humid = ThingTemplates["TruckData.TT"].QueryImplementingThingsWithData({
+                                        
+                                        		query: {
+                                        			"filters": {
+                                        				"type": "GT",
+                                        				"fieldName": "Humidity",
+                                        				"value": "60"
+                                        			}
+                                        		}
+                                        
+                                        	}).rows.length;
+                                        
+                                        	var gas = ThingTemplates["TruckData.TT"].QueryImplementingThingsWithData({
+                                        
+                                        		query: {
+                                        			"filters": {
+                                        				"type": "GT",
+                                        				"fieldName": "GasSensor",
+                                        				"value": "250"
+                                        			}
+                                        		}
+                                        
+                                        	}).rows.length;
+                                            
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(Status)
+                                        	 var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "TempHumidGasDS"
+                                        	});
+                                        	var obj = new Object();
+                                        	obj.TemperatureIssue = temp;
+                                        	obj.HumidityIssue = humid;
+                                        	obj.GasIssue = gas;
+                                        	result.AddRow(obj); 
+                                        
+                                        } catch (err) {
+                                        	logger.error("[TempHumidGasService] : " + err.lineNumber + " ; " + err);
+                                        
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="TruckStatusService">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        
+                                        
+                                        	var activeCount = ThingTemplates["TruckData.TT"].QueryImplementingThingsWithData({
+                                        
+                                        		query: {
+                                        			"filters": {
+                                        				"type": "EQ",
+                                        				"fieldName": "TruckStatus",
+                                        				"value": "Active"
+                                        			}
+                                        		}
+                                        
+                                        	}).rows.length;
+                                        
+                                        	var inactiveCount = ThingTemplates["TruckData.TT"].QueryImplementingThingsWithData({
+                                        
+                                        		query: {
+                                        			"filters": {
+                                        				"type": "EQ",
+                                        				"fieldName": "TruckStatus",
+                                        				"value": "Inactive"
+                                        			}
+                                        		}
+                                        
+                                        	}).rows.length;
+                                        	// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(Status)
+                                        	var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "Status"
+                                        	});
+                                        	var obj = new Object();
+                                        	obj.ActiveTrucks = activeCount;
+                                        	obj.InactiveTrucks = inactiveCount;
+                                        	result.AddRow(obj);
+                                        
+                                        } catch (err) {
+                                        	logger.error("[TruckStatusService] : " + err.lineNumber + " ; " + err);
+                                        
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="password">
+    <MediaEntities>
+        <MediaEntity
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="FF_TruckMenuIcon"
+         projectName="FreshFoodsMonitoringProject"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="Fresh_Food_Org"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Use Existing Flow Configuration"
+                 isMultiRow="false"
+                 name="UseExistingFlowConfiguration"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Connector Name"
+                             baseType="STRING"
+                             description="Connector Name"
+                             name="connectorName"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Ignore SSL Errors"
+                             baseType="BOOLEAN"
+                             description="Ignore SSL errors"
+                             name="ignoreSSLErrors"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <connectorName></connectorName>
+                            <ignoreSSLErrors>false</ignoreSSLErrors>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Content Source Connection information"
+                 isMultiRow="false"
+                 name="ContentSourceConnectionInformation"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="none"
+                             aspect.friendlyName="AuthenticationType"
+                             aspect.selectOptions="none:none|basic:basic|SSO:SSO|SessionUser:SessionUser"
+                             baseType="STRING"
+                             description="Authentication type"
+                             name="authenticationType"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="AuthorizationServerID"
+                             baseType="STRING"
+                             description="Authorization Server ID"
+                             name="authorizationServerId"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Dynamic Content"
+                             baseType="BOOLEAN"
+                             description="Display dynamic content from external URL"
+                             name="dynamicContent"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Ignore SSL Errors"
+                             baseType="BOOLEAN"
+                             description="Ignore SSL errors"
+                             name="ignoreSSLErrors"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="AuthPassword"
+                             baseType="PASSWORD"
+                             description="Password for basic authentication"
+                             name="password"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="TestConnectionURL"
+                             baseType="STRING"
+                             description="The URL to test the connection"
+                             name="testUrl"
+                             ordinal="8"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="60.0"
+                             aspect.friendlyName="Timeout"
+                             baseType="NUMBER"
+                             description="Timeout"
+                             name="timeout"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="URL"
+                             baseType="STRING"
+                             description="The URL to the content source"
+                             name="url"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="AuthUsername"
+                             baseType="STRING"
+                             description="Username for basic authentication"
+                             name="userId"
+                             ordinal="5"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <authenticationType>
+                            <![CDATA[
+                            none
+                            ]]>
+                            </authenticationType>
+                            <authorizationServerId></authorizationServerId>
+                            <dynamicContent>false</dynamicContent>
+                            <ignoreSSLErrors>false</ignoreSSLErrors>
+                            <password></password>
+                            <testUrl></testUrl>
+                            <timeout>60.0</timeout>
+                            <url></url>
+                            <userId></userId>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="List of authorization server scopes"
+                 isMultiRow="true"
+                 name="AuthorizationServerScopesSettings"
+                 ordinal="2">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="A single scope for the authorization server."
+                             name="scope"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="SSL Connection Configuration"
+                 isMultiRow="false"
+                 name="SSLConnectionConfiguration"
+                 ordinal="3">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="SSLKeyStorePassword"
+                             baseType="PASSWORD"
+                             description="SSL Keystore Password"
+                             name="SSLKeyStorePassword"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SSLKeyStorePath"
+                             baseType="STRING"
+                             description="Absolute path to the client SSL keystore"
+                             name="SSLKeyStorePath"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SSLTrustStorePassword"
+                             baseType="PASSWORD"
+                             description="SSL Truststore Password"
+                             name="SSLTrustStorePassword"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SSLTrustStorePath"
+                             baseType="STRING"
+                             description="Absolute path to the SSL client truststore"
+                             name="SSLTrustStorePath"
+                             ordinal="3"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <SSLKeyStorePassword></SSLKeyStorePassword>
+                            <SSLKeyStorePath></SSLKeyStorePath>
+                            <SSLTrustStorePassword></SSLTrustStorePassword>
+                            <SSLTrustStorePath></SSLTrustStorePath>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Session User Configuration"
+                 isMultiRow="false"
+                 name="SessionUserConfigurationTable"
+                 ordinal="4">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="SessionUserQueryParameter"
+                             baseType="STRING"
+                             description="Session User Query Parameter"
+                             name="SessionUserQueryParameter"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <SessionUserQueryParameter></SessionUserQueryParameter>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <content>
+            <![CDATA[
+            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
+            3vgf/Hh/C1SMd+IAAAAASUVORK5CYII=
+            ]]>
+            </content>
+        </MediaEntity>
+    </MediaEntities>
+</Entities>
